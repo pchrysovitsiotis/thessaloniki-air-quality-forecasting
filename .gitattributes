@@ -1,2 +1,9 @@
-# Auto detect text files and perform LF normalization
 * text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.png binary
+# Preserve the exact bytes of hashed scientific fixtures on every platform.
+examples/** -text
+results/** -text

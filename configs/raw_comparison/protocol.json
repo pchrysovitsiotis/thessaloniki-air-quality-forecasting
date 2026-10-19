@@ -1,0 +1,22 @@
+{
+  "frozen_before_training": true,
+  "purpose": "Paired raw-versus-processed experiment with wholly independent QC selection of validation and evaluation rows.",
+  "history_hours": 24,
+  "horizons": [
+    1,
+    6,
+    12
+  ],
+  "features": "11 original variables x 24 lags = 264; no masks, quality flags, calendar, station/coordinates or rolling summaries.",
+  "raw_pollutants": "Original local values; zeros retained; no EEA fields are read.",
+  "minimal_preparation": "Hourly alignment, rejection of nonfinite/negative pollutant values, training-only pooled median imputation and IQR scaling.",
+  "targets": "Raw measured PM10 in training; targets never imputed.",
+  "validation_and_evaluation": "Exactly the independent-QC arm inner validation, meta, calibration and complete test rows. Their target values must equal the original observations.",
+  "selection": "Same optimizer budgets, hidden sizes, losses, seed, and chronological boundaries; all final models refitted from scratch.",
+  "comparison": "Paired scores on the entire independent test, not an intersection with a previous externally selected test.",
+  "limits": [
+    "Combined intervention includes QC, features, input imputation and training sample selection.",
+    "One seed and previously inspected historical period; not a new untouched external test.",
+    "Raw training includes more zero-placeholder observations; numerical preparation is still required."
+  ]
+}

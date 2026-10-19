@@ -1,0 +1,39 @@
+# Credentials and local environments
+.env
+.env.*
+!.env.example
+.secrets/
+*api_key*.txt
+credentials.json
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Full input archives, fitted models and generated results
+/data/
+/outputs/
+/demo_output/
+**/cache/
+**/logs/
+*.parquet
+*.npy
+*.pt
+*.pth
+*.joblib
+*.pkl
+*.log
+*.zip
+
+# Thesis files and local work folders
+*.docx
+*.pdf
+99_PROS_DIAGRAFI/
+tmp/
+output/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

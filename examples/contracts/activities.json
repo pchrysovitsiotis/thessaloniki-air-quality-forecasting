@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "heading": {
+            "type": "string",
+            "enum": [
+              "Οι διαθέσιμες μετρήσεις",
+              "Γενικός πληθυσμός και ευαίσθητες ομάδες",
+              "Όρια της ενημέρωσης"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "heading",
+          "text"
+        ]
+      }
+    },
+    "evidence_checks": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "fact_id": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "fact_id",
+          "value"
+        ]
+      }
+    }
+  },
+  "required": [
+    "title",
+    "sections",
+    "evidence_checks"
+  ]
+}

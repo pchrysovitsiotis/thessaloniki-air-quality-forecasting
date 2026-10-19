@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "evolution",
+    "mode": "plain",
+    "n": 3,
+    "schema_pass": 0,
+    "headings_pass": 3,
+    "length_pass": 3,
+    "mean_words": 199.0,
+    "fact_references": 0,
+    "visible_required_values": 36,
+    "total_required_values": 36
+  },
+  {
+    "kind": "evolution",
+    "mode": "contract",
+    "n": 3,
+    "schema_pass": 3,
+    "headings_pass": 3,
+    "length_pass": 3,
+    "mean_words": 217.0,
+    "fact_references": 12,
+    "visible_required_values": 36,
+    "total_required_values": 36
+  },
+  {
+    "kind": "activities",
+    "mode": "plain",
+    "n": 3,
+    "schema_pass": 0,
+    "headings_pass": 3,
+    "length_pass": 3,
+    "mean_words": 212.0,
+    "fact_references": 0,
+    "visible_required_values": 0,
+    "total_required_values": 0
+  },
+  {
+    "kind": "activities",
+    "mode": "contract",
+    "n": 3,
+    "schema_pass": 3,
+    "headings_pass": 3,
+    "length_pass": 1,
+    "mean_words": 270.0,
+    "fact_references": 12,
+    "visible_required_values": 0,
+    "total_required_values": 0
+  },
+  {
+    "kind": "comparison",
+    "mode": "plain",
+    "n": 3,
+    "schema_pass": 0,
+    "headings_pass": 3,
+    "length_pass": 1,
+    "mean_words": 183.3,
+    "fact_references": 0,
+    "visible_required_values": 21,
+    "total_required_values": 21
+  },
+  {
+    "kind": "comparison",
+    "mode": "contract",
+    "n": 3,
+    "schema_pass": 3,
+    "headings_pass": 3,
+    "length_pass": 0,
+    "mean_words": 103.7,
+    "fact_references": 12,
+    "visible_required_values": 21,
+    "total_required_values": 21
+  }
+]

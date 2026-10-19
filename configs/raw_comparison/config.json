@@ -1,0 +1,34 @@
+{
+  "start": "2017-01-01",
+  "horizons": [
+    1,
+    6,
+    12
+  ],
+  "history_hours": 24,
+  "observation_delay_hours": 0,
+  "seed": 42,
+  "threads": 3,
+  "batch_size": 512,
+  "neural_max_epochs": 28,
+  "patience": 5,
+  "learning_rate": 0.001,
+  "tcn_channels": 16,
+  "ann_hidden": [
+    128,
+    64
+  ],
+  "xgb_max_trees": 500,
+  "xgb_depth": 5,
+  "interval_alpha": 0.1,
+  "event_threshold": 120,
+  "bootstrap_replicates": 1000,
+  "boundaries": {
+    "meta": "2024-11-05 15:00:00+00:00",
+    "calibration": "2025-04-23 06:00:00+00:00",
+    "test": "2025-08-13 17:00:00+00:00"
+  },
+  "inner_boundary": "2024-06-23 16:00:00+00:00",
+  "experiment_arm": "raw_control_independent_shared_evaluation",
+  "forecast_definition": "Direct forecast h hours after last measured observation end; origin equals input_time."
+}

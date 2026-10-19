@@ -1,0 +1,40 @@
+{
+  "name": "Independent quality control and PM10 forecasting",
+  "frozen_before_model_training": true,
+  "purpose": "Reprocess original local concentrations without EEA validity flags or externally selected evaluation rows, then refit ANN, TCN and XGBoost.",
+  "input_history_hours": 24,
+  "horizons_hours": [
+    1,
+    6,
+    12
+  ],
+  "data_origin": "Original-value column extracted from the preserved local provenance archive. External matched measurements and validity fields are neither extracted nor read by this experiment.",
+  "source_preservation": "Immutable extracted values and source hashes; no edits to the preceding experiment.",
+  "hard_rules": [
+    "Reject nonfinite values, known sentinels and violations of elementary physical domains. Negative concentrations are excluded as a nonnegative modelling convention, not certified sensor invalidity.",
+    "PM10 or PM2.5 exactly zero for at least 24 consecutive hours: exclude from the 24th hour onward; do not retrospectively remove earlier hours.",
+    "At least three pollutants exactly zero for at least six consecutive hours, including a particulate pollutant: exclude affected zero values from the sixth shared hour onward.",
+    "Do not exclude a single gaseous pollutant solely for a long zero run, because resolution and detection limits are not established."
+  ],
+  "flag_only_rules": [
+    "Zero runs from six hours; positive exact flatlines from twelve hours.",
+    "Hampel deviation from the previous 24 hours (at least 12 observations), 6 scaled MAD, combined with a rate change above the training 99.5th percentile. Keep the flagged value.",
+    "PM10 disagreement with at least two contemporaneous neighbouring stations and persistent disagreement over a trailing 24-hour window. Keep the flagged value."
+  ],
+  "missingness": "Inputs: forward fill at most two hours, then training station median with pooled training fallback. Preserve observed masks. Targets: never impute. Forecast origin must have observed retained PM10 and at least 18 observed PM10 values in the last 24 hours.",
+  "feature_engineering": "Same 727 inputs for all three algorithms: 24 hours of eleven pollutant/weather variables, observation masks, independent QC flags, plus calendar, station, coordinates and PM10 summaries/changes.",
+  "leakage_control": "Imputation, scaling and statistical thresholds fitted strictly before the inner validation boundary. Hard rules and all rolling features use current or prior measurements. Targets crossing a split boundary are purged. Fixed calendar boundaries in config.json; all sample cohorts generated afresh from independent retained measurements.",
+  "selection": "MSE versus Huber and training duration selected on inner validation. Refit all chronological training rows. Four constrained ensembles fit on meta period; prediction intervals on calibration period. Test never used for new tuning.",
+  "evaluation": "Same independently generated test station-hours for every model at a given horizon. RMSE, MAE, R2, bias, station/month detail and persistence reference. Seven-day paired bootstrap for conditional differences.",
+  "limits": [
+    "QC rules are transparent heuristics, not certified instrument validation; sensitivity to zero-run thresholds has not been estimated.",
+    "A statistical flag can reflect genuine pollution. No percentile clipping, spike deletion or broad smoothing is applied.",
+    "Historical test period has previously been inspected; this is not a newly collected external holdout.",
+    "One fitted seed; operational availability of observations and archived weather is assumed rather than demonstrated."
+  ],
+  "method_references": [
+    "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1013CPT.txt",
+    "https://www.mathworks.com/help/signal/ref/hampel.html",
+    "https://scikit-learn.org/stable/common_pitfalls.html"
+  ]
+}

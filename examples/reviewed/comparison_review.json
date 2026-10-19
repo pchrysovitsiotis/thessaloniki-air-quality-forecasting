@@ -1,0 +1,11 @@
+{
+  "status": "reviewed and edited",
+  "source_first_completion": "../original/comparison_contract_r1.json",
+  "original_sha256": "cbc8cb3bef1c507510f4e068767c31f4a6c5941a243f274c1c9952c4e6f53729",
+  "changes": [
+    "Διατηρήθηκαν οι σωστές μετρήσεις, η κατάταξη και η διαφορά. Δεν προστέθηκε κείμενο μόνο για να επιτευχθεί τεχνητά ο στόχος λέξεων."
+  ],
+  "scope": "Editorial review of the first plain and first contract responses for each task; not a blinded independent user study.",
+  "experimental_scores_unchanged": true,
+  "word_count_after_edit": 84
+}

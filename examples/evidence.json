@@ -1,0 +1,359 @@
+{
+  "mode": "historical_replay",
+  "origin_utc": "2026-01-28T18:00:00+00:00",
+  "origin_local": "28/01/2026 20:00",
+  "timezone": "Europe/Athens",
+  "time_definition": "end of hourly interval",
+  "unit": "μg/m³",
+  "history_hours": 24,
+  "forecast_horizons": [
+    1,
+    6,
+    12
+  ],
+  "model": "TCN_ANN_XGBoost",
+  "selection": "Latest test origin with maximum simultaneous station coverage and non-suspect observed PM10; predictions not used to select date.",
+  "stations": [
+    {
+      "id": "GR0018A",
+      "name": "Αγία Σοφία",
+      "station_type": "traffic",
+      "time": "28/01/2026 20:00",
+      "observed_pm10": 59.00000000000001,
+      "measured_pollutants": {
+        "PM10": 59.00000000000001,
+        "PM2.5": 23.0,
+        "NO2": 86.0,
+        "O3": 3.0
+      },
+      "guidance": {
+        "level": 3,
+        "category": "Κακή",
+        "minimum_pollutant_coverage": true,
+        "basis": "available measured pollutants only",
+        "dominant_pollutants": [
+          "NO2"
+        ],
+        "missing_pollutants": [
+          "SO2"
+        ],
+        "general": "Εξετάστε τη μείωση της έντονης εξωτερικής δραστηριότητας αν εμφανίζετε ερεθισμό ματιών, βήχα ή ερεθισμό λαιμού.",
+        "sensitive": "Εξετάστε τη μείωση της σωματικής δραστηριότητας, ιδιαίτερα έξω, ειδικά αν εμφανίζετε συμπτώματα.",
+        "source": "https://airindex.eea.europa.eu/AQI/index.html",
+        "guidance_available": true
+      },
+      "forecasts": [
+        {
+          "horizon": 1,
+          "time": "28/01/2026 21:00",
+          "pm10": "65,2",
+          "difference": "6,2",
+          "direction": "αύξηση",
+          "lower": "54,4",
+          "upper": "76,0"
+        },
+        {
+          "horizon": 6,
+          "time": "29/01/2026 02:00",
+          "pm10": "35,4",
+          "difference": "-23,6",
+          "direction": "μείωση",
+          "lower": "20,5",
+          "upper": "50,2"
+        },
+        {
+          "horizon": 12,
+          "time": "29/01/2026 08:00",
+          "pm10": "33,3",
+          "difference": "-25,7",
+          "direction": "μείωση",
+          "lower": "17,7",
+          "upper": "49,0"
+        }
+      ]
+    },
+    {
+      "id": "GR0019A",
+      "name": "Καλαμαριά",
+      "station_type": "background",
+      "time": "28/01/2026 20:00",
+      "observed_pm10": 30.000000000000004,
+      "measured_pollutants": {
+        "PM10": 30.000000000000004,
+        "NO2": 66.0,
+        "O3": 10.0
+      },
+      "guidance": {
+        "level": 3,
+        "category": "Κακή",
+        "minimum_pollutant_coverage": true,
+        "basis": "available measured pollutants only",
+        "dominant_pollutants": [
+          "NO2"
+        ],
+        "missing_pollutants": [
+          "PM2.5",
+          "SO2"
+        ],
+        "general": "Εξετάστε τη μείωση της έντονης εξωτερικής δραστηριότητας αν εμφανίζετε ερεθισμό ματιών, βήχα ή ερεθισμό λαιμού.",
+        "sensitive": "Εξετάστε τη μείωση της σωματικής δραστηριότητας, ιδιαίτερα έξω, ειδικά αν εμφανίζετε συμπτώματα.",
+        "source": "https://airindex.eea.europa.eu/AQI/index.html",
+        "guidance_available": true
+      },
+      "forecasts": [
+        {
+          "horizon": 1,
+          "time": "28/01/2026 21:00",
+          "pm10": "30,0",
+          "difference": "0,0",
+          "direction": "περίπου σταθερή",
+          "lower": "21,3",
+          "upper": "38,8"
+        },
+        {
+          "horizon": 6,
+          "time": "29/01/2026 02:00",
+          "pm10": "16,5",
+          "difference": "-13,5",
+          "direction": "μείωση",
+          "lower": "5,3",
+          "upper": "27,8"
+        },
+        {
+          "horizon": 12,
+          "time": "29/01/2026 08:00",
+          "pm10": "15,6",
+          "difference": "-14,4",
+          "direction": "μείωση",
+          "lower": "3,5",
+          "upper": "27,6"
+        }
+      ]
+    },
+    {
+      "id": "GR0020A",
+      "name": "Κορδελιό",
+      "station_type": "industrial",
+      "time": "28/01/2026 20:00",
+      "observed_pm10": 84.0,
+      "measured_pollutants": {
+        "PM10": 84.0,
+        "NO2": 67.0,
+        "O3": 7.000000000000001
+      },
+      "guidance": {
+        "level": 3,
+        "category": "Κακή",
+        "minimum_pollutant_coverage": true,
+        "basis": "available measured pollutants only",
+        "dominant_pollutants": [
+          "NO2"
+        ],
+        "missing_pollutants": [
+          "PM2.5",
+          "SO2"
+        ],
+        "general": "Εξετάστε τη μείωση της έντονης εξωτερικής δραστηριότητας αν εμφανίζετε ερεθισμό ματιών, βήχα ή ερεθισμό λαιμού.",
+        "sensitive": "Εξετάστε τη μείωση της σωματικής δραστηριότητας, ιδιαίτερα έξω, ειδικά αν εμφανίζετε συμπτώματα.",
+        "source": "https://airindex.eea.europa.eu/AQI/index.html",
+        "guidance_available": true
+      },
+      "forecasts": [
+        {
+          "horizon": 1,
+          "time": "28/01/2026 21:00",
+          "pm10": "66,9",
+          "difference": "-17,1",
+          "direction": "μείωση",
+          "lower": "55,3",
+          "upper": "78,5"
+        },
+        {
+          "horizon": 6,
+          "time": "29/01/2026 02:00",
+          "pm10": "29,6",
+          "difference": "-54,4",
+          "direction": "μείωση",
+          "lower": "12,9",
+          "upper": "46,3"
+        },
+        {
+          "horizon": 12,
+          "time": "29/01/2026 08:00",
+          "pm10": "32,9",
+          "difference": "-51,1",
+          "direction": "μείωση",
+          "lower": "13,6",
+          "upper": "52,3"
+        }
+      ]
+    },
+    {
+      "id": "GR0046A",
+      "name": "Σίνδος",
+      "station_type": "industrial",
+      "time": "28/01/2026 20:00",
+      "observed_pm10": 23.0,
+      "measured_pollutants": {
+        "PM10": 23.0,
+        "NO2": 57.00000000000001
+      },
+      "guidance": {
+        "level": 2,
+        "category": "Μέτρια",
+        "minimum_pollutant_coverage": false,
+        "basis": "available measured pollutants only",
+        "dominant_pollutants": [
+          "NO2"
+        ],
+        "missing_pollutants": [
+          "PM2.5",
+          "O3",
+          "SO2"
+        ],
+        "general": "Ανεπαρκής κάλυψη ρύπων για οδηγία δραστηριοτήτων· συμβουλευτείτε την επίσημη ενημέρωση.",
+        "sensitive": "Ανεπαρκής κάλυψη ρύπων για οδηγία δραστηριοτήτων· συμβουλευτείτε την επίσημη ενημέρωση.",
+        "source": "https://airindex.eea.europa.eu/AQI/index.html",
+        "guidance_available": false
+      },
+      "forecasts": [
+        {
+          "horizon": 1,
+          "time": "28/01/2026 21:00",
+          "pm10": "29,2",
+          "difference": "6,2",
+          "direction": "αύξηση",
+          "lower": "20,0",
+          "upper": "38,4"
+        },
+        {
+          "horizon": 6,
+          "time": "29/01/2026 02:00",
+          "pm10": "19,7",
+          "difference": "-3,3",
+          "direction": "μείωση",
+          "lower": "6,9",
+          "upper": "32,5"
+        },
+        {
+          "horizon": 12,
+          "time": "29/01/2026 08:00",
+          "pm10": "22,0",
+          "difference": "-1,0",
+          "direction": "περίπου σταθερή",
+          "lower": "8,8",
+          "upper": "35,2"
+        }
+      ]
+    }
+  ],
+  "unavailable": [],
+  "observed_ranking": [
+    {
+      "name": "Σίνδος",
+      "pm10": "23,0"
+    },
+    {
+      "name": "Καλαμαριά",
+      "pm10": "30,0"
+    },
+    {
+      "name": "Αγία Σοφία",
+      "pm10": "59,0"
+    },
+    {
+      "name": "Κορδελιό",
+      "pm10": "84,0"
+    }
+  ],
+  "observed_gap": "61,0",
+  "facts": {
+    "origin": "28/01/2026 20:00",
+    "unit": "μg/m³",
+    "GR0018A.observed": "59,0",
+    "GR0018A.h1": "65,2",
+    "GR0018A.h6": "35,4",
+    "GR0018A.h12": "33,3",
+    "GR0018A.category": "Κακή",
+    "GR0018A.general": "Εξετάστε τη μείωση της έντονης εξωτερικής δραστηριότητας αν εμφανίζετε ερεθισμό ματιών, βήχα ή ερεθισμό λαιμού.",
+    "GR0018A.sensitive": "Εξετάστε τη μείωση της σωματικής δραστηριότητας, ιδιαίτερα έξω, ειδικά αν εμφανίζετε συμπτώματα.",
+    "GR0019A.observed": "30,0",
+    "GR0019A.h1": "30,0",
+    "GR0019A.h6": "16,5",
+    "GR0019A.h12": "15,6",
+    "GR0019A.category": "Κακή",
+    "GR0019A.general": "Εξετάστε τη μείωση της έντονης εξωτερικής δραστηριότητας αν εμφανίζετε ερεθισμό ματιών, βήχα ή ερεθισμό λαιμού.",
+    "GR0019A.sensitive": "Εξετάστε τη μείωση της σωματικής δραστηριότητας, ιδιαίτερα έξω, ειδικά αν εμφανίζετε συμπτώματα.",
+    "GR0020A.observed": "84,0",
+    "GR0020A.h1": "66,9",
+    "GR0020A.h6": "29,6",
+    "GR0020A.h12": "32,9",
+    "GR0020A.category": "Κακή",
+    "GR0020A.general": "Εξετάστε τη μείωση της έντονης εξωτερικής δραστηριότητας αν εμφανίζετε ερεθισμό ματιών, βήχα ή ερεθισμό λαιμού.",
+    "GR0020A.sensitive": "Εξετάστε τη μείωση της σωματικής δραστηριότητας, ιδιαίτερα έξω, ειδικά αν εμφανίζετε συμπτώματα.",
+    "GR0046A.observed": "23,0",
+    "GR0046A.h1": "29,2",
+    "GR0046A.h6": "19,7",
+    "GR0046A.h12": "22,0",
+    "GR0046A.category": "Μέτρια",
+    "GR0046A.general": "Ανεπαρκής κάλυψη ρύπων για οδηγία δραστηριοτήτων· συμβουλευτείτε την επίσημη ενημέρωση.",
+    "GR0046A.sensitive": "Ανεπαρκής κάλυψη ρύπων για οδηγία δραστηριοτήτων· συμβουλευτείτε την επίσημη ενημέρωση.",
+    "comparison.minimum": "Σίνδος",
+    "comparison.maximum": "Κορδελιό",
+    "comparison.gap": "61,0"
+  },
+  "guidance_source": {
+    "url": "https://airindex.eea.europa.eu/AQI/index.html",
+    "checked_on": "2026-10-09",
+    "basis": "Hourly concentrations, EEA methodology; Greek paraphrase of health messages.",
+    "bands_upper": {
+      "PM10": [
+        15,
+        45,
+        120,
+        195,
+        270
+      ],
+      "PM2.5": [
+        5,
+        15,
+        50,
+        90,
+        140
+      ],
+      "NO2": [
+        10,
+        25,
+        60,
+        100,
+        150
+      ],
+      "O3": [
+        60,
+        100,
+        120,
+        160,
+        180
+      ],
+      "SO2": [
+        20,
+        40,
+        125,
+        190,
+        275
+      ]
+    },
+    "decimal_convention": "Continuous intervals: previous upper < concentration <= upper. No rounding before categorisation."
+  },
+  "constraints": [
+    "Historical replay, never current/live/today; explicit full date and local time in each report.",
+    "Only +1/+6/+12 point forecasts, no interpolation or entire best time window.",
+    "No future observed targets are supplied; forecast is not a measurement.",
+    "Activities: describe only the supplied measured-pollutant guidance, including missing coverage; no forecast of an overall index from PM10 alone.",
+    "Do not diagnose, prescribe medication, promise safe exposure or infer a pollution source.",
+    "No legal daily-limit claims from hourly values; no personalised medical advice.",
+    "Comparison: same origin for all stations; a station does not represent every street; missing is not zero.",
+    "Intervals are estimates with imperfect historical coverage, never guaranteed probabilities.",
+    "The 1 μg/m³ direction tolerance is a display convention, not statistical significance."
+  ]
+}

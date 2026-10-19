@@ -1,0 +1,15 @@
+{
+  "source_files": {
+    "data/source/original_pollutants.parquet": "3f2a8f349dabc16a9b98bfccfe24347eee47a65357bbb278f76fd45e1b2494cf",
+    "data/source/station_metadata.json": "daa66dfeac124f735b6e39f2c66caa7e24d808a3099e3ce38d5d55550355c98d",
+    "data/source/station_weather.parquet": "4d1789cb42c3bed1e3d5cb64b59f69a888c6bba2abf337ad1fd04c7d8e6d974c"
+  },
+  "source_columns": [
+    "station",
+    "datetime",
+    "pollutant",
+    "value"
+  ],
+  "input_kind": "Original pollutant observations before project QC, archived weather and station coordinates.",
+  "external_quality_flags_used": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "reviewed and edited",
+  "source_first_completion": "../original/evolution_contract_r1.json",
+  "original_sha256": "8b8ba66b94cd8c17369933bf38758373f6a12fe91506dd13ad77406498a519ce",
+  "changes": [
+    "Οι κατηγορίες από πολλούς ρύπους εμφανίζονταν αμέσως μετά τη συγκέντρωση PM10, χωρίς αναφορά στον καθοριστικό NO2.",
+    "Το «έως» αντικαταστάθηκε από «στις», επειδή οι προβλέψεις αφορούν συγκεκριμένη ώρα.",
+    "Η εξέλιξη στη Σίνδο διευκρινίστηκε ως 19,7 → 22,0 μεταξύ +6 και +12· το περίπου σταθερή στην είσοδο αφορούσε σύγκριση με την αρχική τιμή 23,0."
+  ],
+  "scope": "Editorial review of the first plain and first contract responses for each task; not a blinded independent user study.",
+  "experimental_scores_unchanged": true,
+  "word_count_after_edit": 143
+}

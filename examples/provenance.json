@@ -1,0 +1,29 @@
+{
+  "project": "Thessaloniki air-quality forecasting",
+  "example_type": "Saved historical predictions and cached LLM responses; no new inference or API call in the demo.",
+  "forecast_origin_utc": "2026-01-28T18:00:00+00:00",
+  "history_hours": 24,
+  "horizons_hours": [
+    1,
+    6,
+    12
+  ],
+  "forecast_model": "TCN_ANN_XGBoost",
+  "llm_model": "gemini-2.5-flash",
+  "snapshot_selection": "Latest held-out test origin with maximum simultaneous station coverage and non-suspect observed PM10; predictions were not used to select the date.",
+  "scope": "The examples use four stations present in the test period. Training schemas also include GR0463A, which has no samples in the final test period.",
+  "reviewed_examples": "Edited with AI-assistant assistance; these are not unedited model completions or an independent human evaluation.",
+  "contract_comparison": "Three report tasks, two output conditions, three repetitions: 18 original completions. Numeric-presence scores use the corrected punctuation-aware matcher.",
+  "input_data": "The full original-value pollutant/weather archive, prepared matrices and model binaries are excluded from this package.",
+  "sources": {
+    "guidance_methodology": "https://airindex.eea.europa.eu/AQI/index.html"
+  },
+  "guidance_snapshot_date": "2026-10-09",
+  "limitations": [
+    "Historical replay, not live air-quality information.",
+    "One seed and a previously inspected historical period.",
+    "The raw-versus-processed comparison combines cleaning, features, imputation and training-sample selection.",
+    "A valid JSON structure is not a semantic or safety guarantee.",
+    "Intervals have imperfect observed coverage; their nominal 90% level is not a guarantee."
+  ]
+}

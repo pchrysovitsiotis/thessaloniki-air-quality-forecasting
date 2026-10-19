@@ -1,0 +1,12 @@
+{
+  "status": "reviewed and edited",
+  "source_first_completion": "../original/activities_contract_r1.json",
+  "original_sha256": "3ee5a48764a95613d106db74fc94551f3d0c1e99a382fc066267b65f136f80ab",
+  "changes": [
+    "Αφαιρέθηκαν οι προβλέψεις PM10, οι οποίες δεν χρειάζονται στην ενημέρωση δραστηριοτήτων της ώρας αφετηρίας.",
+    "Η μερική ένδειξη NO2 στη Σίνδο δεν παρουσιάζεται ως πλήρης κατηγορία σταθμού."
+  ],
+  "scope": "Editorial review of the first plain and first contract responses for each task; not a blinded independent user study.",
+  "experimental_scores_unchanged": true,
+  "word_count_after_edit": 144
+}
